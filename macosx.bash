@@ -10,5 +10,5 @@ make clean
 
 CFLAGS="-arch i386 -arch x86_64" LDFLAGS="-arch i386 -arch x86_64" make java
 
-cp bin/libastylej.dylib ../../../../
+cp bin/libastylej.dylib ../../../../libastylej.jnilib
 
