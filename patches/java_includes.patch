@@ -7,7 +7,20 @@ Index: AStyle/build/gcc/Makefile
  ipath=$(prefix)/bin
  CBASEFLAGS = -W -Wall -fno-rtti -fno-exceptions
 -JAVAINCS   = -I$(JAVA_HOME)/include
-+JAVAINCS   = -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/$(ARCH)
++JAVAINCS   = -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/linux
  CXX = g++
  INSTALL=install -o $(USER) -g $(USER)
  
+Index: AStyle/build/mac/Makefile
+===================================================================
+--- AStyle/build/mac/Makefile	(revisione 398)
++++ AStyle/build/mac/Makefile	(copia locale)
+@@ -37,7 +37,7 @@
+ objdir = obj
+ ipath=$(prefix)/bin
+ CBASEFLAGS = -W -Wall -fno-rtti -fno-exceptions
+-JAVAINCS   = -I$(JAVA_HOME)/include
++JAVAINCS   = -I$(JAVA_HOME)
+ CXX = g++
+ INSTALL=install -o $(USER) -g $(USER)
+ # INSTALL=install -o 0 -g 0
