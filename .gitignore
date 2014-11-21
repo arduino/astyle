@@ -1,2 +1,4 @@
 astyle-code
 *.so
+*.jnilib
+*.dll

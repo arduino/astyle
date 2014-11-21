@@ -1,6 +1,64 @@
+Index: AStyle/build/vs2010/AStyleJava/AStyleJava.vcxproj
+===================================================================
+--- AStyle/build/vs2010/AStyleJava/AStyleJava.vcxproj	(revisione 450)
++++ AStyle/build/vs2010/AStyleJava/AStyleJava.vcxproj	(copia locale)
+@@ -109,7 +109,7 @@
+   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+     <ClCompile>
+       <Optimization>Disabled</Optimization>
+-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.7.0_55\include;C:\Program Files (x86)\Java\jdk1.7.0_55\include\win32</AdditionalIncludeDirectories>
++      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.6.0_45\include\win32;C:\Program Files (x86)\Java\jdk1.6.0_45\include</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>_DEBUG;ASTYLE_JNI</PreprocessorDefinitions>
+       <MinimalRebuild>true</MinimalRebuild>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+@@ -132,7 +132,7 @@
+   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+     <ClCompile>
+       <Optimization>Disabled</Optimization>
+-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.7.0_55\include;C:\Program Files (x86)\Java\jdk1.7.0_55\include\win32</AdditionalIncludeDirectories>
++      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.6.0_45\include\win32;C:\Program Files (x86)\Java\jdk1.6.0_45\include</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>_DEBUG;ASTYLE_JNI</PreprocessorDefinitions>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+@@ -153,7 +153,7 @@
+     <ClCompile>
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.7.0_55\include;C:\Program Files (x86)\Java\jdk1.7.0_55\include\win32</AdditionalIncludeDirectories>
++      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.6.0_45\include\win32;C:\Program Files (x86)\Java\jdk1.6.0_45\include</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>NDEBUG;ASTYLE_JNI</PreprocessorDefinitions>
+       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <RuntimeTypeInfo>false</RuntimeTypeInfo>
+@@ -177,7 +177,7 @@
+     <ClCompile>
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.7.0_55\include;C:\Program Files (x86)\Java\jdk1.7.0_55\include\win32</AdditionalIncludeDirectories>
++      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.6.0_45\include\win32;C:\Program Files (x86)\Java\jdk1.6.0_45\include</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>NDEBUG;ASTYLE_JNI</PreprocessorDefinitions>
+       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+       <RuntimeTypeInfo>false</RuntimeTypeInfo>
+@@ -201,7 +201,7 @@
+     <ClCompile>
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.7.0_55\include;C:\Program Files (x86)\Java\jdk1.7.0_55\include\win32</AdditionalIncludeDirectories>
++      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.6.0_45\include\win32;C:\Program Files (x86)\Java\jdk1.6.0_45\include</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>NDEBUG;ASTYLE_JNI</PreprocessorDefinitions>
+       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <RuntimeTypeInfo>false</RuntimeTypeInfo>
+@@ -225,7 +225,7 @@
+     <ClCompile>
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.7.0_55\include;C:\Program Files (x86)\Java\jdk1.7.0_55\include\win32</AdditionalIncludeDirectories>
++      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.6.0_45\include\win32;C:\Program Files (x86)\Java\jdk1.6.0_45\include</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>NDEBUG;ASTYLE_JNI</PreprocessorDefinitions>
+       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+       <RuntimeTypeInfo>false</RuntimeTypeInfo>
 Index: AStyle/build/gcc/Makefile
 ===================================================================
---- AStyle/build/gcc/Makefile	(revisione 398)
+--- AStyle/build/gcc/Makefile	(revisione 450)
 +++ AStyle/build/gcc/Makefile	(copia locale)
 @@ -33,7 +33,7 @@
  objdir = obj
@@ -11,16 +69,3 @@ Index: AStyle/build/gcc/Makefile
  CXX = g++
  INSTALL=install -o $(USER) -g $(USER)
  
-Index: AStyle/build/mac/Makefile
-===================================================================
---- AStyle/build/mac/Makefile	(revisione 398)
-+++ AStyle/build/mac/Makefile	(copia locale)
-@@ -37,7 +37,7 @@
- objdir = obj
- ipath=$(prefix)/bin
- CBASEFLAGS = -W -Wall -fno-rtti -fno-exceptions
--JAVAINCS   = -I$(JAVA_HOME)/include
-+JAVAINCS   = -I$(JAVA_HOME)
- CXX = g++
- INSTALL=install -o $(USER) -g $(USER)
- # INSTALL=install -o 0 -g 0

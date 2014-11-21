@@ -1,8 +1,8 @@
 Index: AStyle/src/astyle_main.cpp
 ===================================================================
---- AStyle/src/astyle_main.cpp	(revisione 431)
+--- AStyle/src/astyle_main.cpp	(revisione 450)
 +++ AStyle/src/astyle_main.cpp	(copia locale)
-@@ -3469,7 +3469,7 @@
+@@ -3538,7 +3538,7 @@
  // called by a java program to get the version number
  // the function name is constructed from method names in the calling java program
  extern "C"  EXPORT
@@ -11,7 +11,7 @@ Index: AStyle/src/astyle_main.cpp
  {
  	return env->NewStringUTF(g_version);
  }
-@@ -3477,7 +3477,7 @@
+@@ -3546,7 +3546,7 @@
  // called by a java program to format the source code
  // the function name is constructed from method names in the calling java program
  extern "C"  EXPORT
@@ -22,17 +22,17 @@ Index: AStyle/src/astyle_main.cpp
                                                  jstring optionsJava)
 Index: AStyle/src/astyle_main.h
 ===================================================================
---- AStyle/src/astyle_main.h	(revisione 431)
+--- AStyle/src/astyle_main.h	(revisione 450)
 +++ AStyle/src/astyle_main.h	(copia locale)
-@@ -353,9 +353,9 @@
+@@ -421,9 +421,9 @@
  char* STDCALL javaMemoryAlloc(unsigned long memoryNeeded);
  // the following function names are constructed from method names in the calling java program
- extern "C"  EXPORT
+ extern "C" EXPORT
 -jstring STDCALL Java_AStyleInterface_AStyleGetVersion(JNIEnv* env, jclass);
 +jstring STDCALL Java_cc_arduino_packages_formatter_AStyleInterface_AStyleGetVersion(JNIEnv* env, jclass);
- extern "C"  EXPORT
--jstring STDCALL Java_AStyleInterface_AStyleMain
-+jstring STDCALL Java_cc_arduino_packages_formatter_AStyleInterface_AStyleMain
- (JNIEnv* env, jobject obj, jstring textInJava, jstring optionsJava);
- #endif //  ASTYLE_JNI
- 
+ extern "C" EXPORT
+-jstring STDCALL Java_AStyleInterface_AStyleMain(JNIEnv* env,
++jstring STDCALL Java_cc_arduino_packages_formatter_AStyleInterface_AStyleMain(JNIEnv* env,
+                                                 jobject obj,
+                                                 jstring textInJava,
+                                                 jstring optionsJava);
