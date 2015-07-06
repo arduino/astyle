@@ -1,6 +1,6 @@
 Index: AStyle/build/vs2010/AStyleJava/AStyleJava.vcxproj
 ===================================================================
---- AStyle/build/vs2010/AStyleJava/AStyleJava.vcxproj	(revisione 450)
+--- AStyle/build/vs2010/AStyleJava/AStyleJava.vcxproj	(revisione 471)
 +++ AStyle/build/vs2010/AStyleJava/AStyleJava.vcxproj	(copia locale)
 @@ -109,7 +109,7 @@
    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -58,7 +58,7 @@ Index: AStyle/build/vs2010/AStyleJava/AStyleJava.vcxproj
        <RuntimeTypeInfo>false</RuntimeTypeInfo>
 Index: AStyle/build/gcc/Makefile
 ===================================================================
---- AStyle/build/gcc/Makefile	(revisione 450)
+--- AStyle/build/gcc/Makefile	(revisione 471)
 +++ AStyle/build/gcc/Makefile	(copia locale)
 @@ -33,7 +33,7 @@
  objdir = obj
