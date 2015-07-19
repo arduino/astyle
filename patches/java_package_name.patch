@@ -1,8 +1,8 @@
 Index: AStyle/src/astyle_main.cpp
 ===================================================================
---- AStyle/src/astyle_main.cpp	(revisione 450)
+--- AStyle/src/astyle_main.cpp	(revisione 471)
 +++ AStyle/src/astyle_main.cpp	(copia locale)
-@@ -3538,7 +3538,7 @@
+@@ -3550,7 +3550,7 @@
  // called by a java program to get the version number
  // the function name is constructed from method names in the calling java program
  extern "C"  EXPORT
@@ -11,7 +11,7 @@ Index: AStyle/src/astyle_main.cpp
  {
  	return env->NewStringUTF(g_version);
  }
-@@ -3546,7 +3546,7 @@
+@@ -3558,7 +3558,7 @@
  // called by a java program to format the source code
  // the function name is constructed from method names in the calling java program
  extern "C"  EXPORT
@@ -22,9 +22,9 @@ Index: AStyle/src/astyle_main.cpp
                                                  jstring optionsJava)
 Index: AStyle/src/astyle_main.h
 ===================================================================
---- AStyle/src/astyle_main.h	(revisione 450)
+--- AStyle/src/astyle_main.h	(revisione 471)
 +++ AStyle/src/astyle_main.h	(copia locale)
-@@ -421,9 +421,9 @@
+@@ -422,9 +422,9 @@
  char* STDCALL javaMemoryAlloc(unsigned long memoryNeeded);
  // the following function names are constructed from method names in the calling java program
  extern "C" EXPORT
