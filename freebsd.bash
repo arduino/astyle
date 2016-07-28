@@ -1,4 +1,6 @@
-#!/usr/bin/env -S bash -e
+#!/usr/bin/env bash
+
+set -e
 
 JAVA_INCLUDE_PATH=/usr/local/openjdk8/include
 
